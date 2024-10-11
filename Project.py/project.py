@@ -34,6 +34,7 @@ plt.xlabel('Sentiment_Label')
 plt.ylabel('Percentage')
 plt.show()
 
+
 #Sentiment Distribution by Product
 product_sentiment.unstack().plot(kind='bar')
 plt.title('Sentiment Distribution by Product')
