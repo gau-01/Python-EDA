@@ -44,6 +44,9 @@ plt.figure(figsize=(20,10),dpi=400)
 plt.show()
 
 #Word Cloud for Positive Sentiment
+sentiment_map = {'Negative': -1, 'Neutral': 0, 'Positive': 1}
+feedback['Sentiment_Label'] = feedback['Sentiment_Label'].map(sentiment_map)
+
 from wordcloud import WordCloud
 
 positive_text = feedback[feedback['Sentiment_Label'] > 0]['Comment']
